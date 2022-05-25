@@ -1,5 +1,7 @@
 ---
 - hosts: all
+  environment: 
+  ansible_task_timeout: "{{ per_task_timeout }}"
   tasks:
   
     - name: get the environment variables
