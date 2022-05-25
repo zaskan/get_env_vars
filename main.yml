@@ -1,0 +1,9 @@
+---
+- hosts: all
+  tasks:
+  
+    - name: get the environment variables
+      shell: "export -p"
+      register: output
+
+    - debug: var=output.stdout_lines
